@@ -3,12 +3,15 @@ package datastructure.linkedlist;
 public class Main {
 
     public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(4);
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.makeEmpty();
+        myLinkedList.append(1);
+        myLinkedList.append(2);
 
 
-        myLinkedList.printHead();
-        myLinkedList.printTail();
-        myLinkedList.printLength();
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
 
         System.out.println("\nLinked List:");
         myLinkedList.printList();
