@@ -71,7 +71,6 @@ public class LinkedList {
         }
 
         Node currentNode = head;
-
         Node removedNode = null;
 
         for(int i = 0; i < length; i++) {
@@ -91,6 +90,39 @@ public class LinkedList {
         }
 
         return removedNode;
+    }
+
+    public void prepend(int value) {
+
+        Node newNode = new Node(value);
+
+        if(length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.setNext(head);
+            head = newNode;
+        }
+
+        length++;
+    }
+
+    public Node removeFirst() {
+
+        if(length == 0) {
+            return null;
+        }
+
+        Node temp = head;
+        head = head.getNext();
+        temp.setNext(null);
+        length--;
+
+        if(length == 0) {
+            tail = null;
+        }
+
+        return temp;
     }
 
 }
