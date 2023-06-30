@@ -3,14 +3,12 @@ package datastructure.linkedlist;
 public class Main {
 
     public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(2);
+        LinkedList myLinkedList = new LinkedList(0);
         myLinkedList.append(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
 
-        // (2) Items - Returns 2 Node
-        System.out.println(myLinkedList.removeFirst().getValue());
-        // (1) Item - Returns 1 Node
-        System.out.println(myLinkedList.removeFirst().getValue());
-        // (0) Items - Returns null
-        System.out.println(myLinkedList.removeFirst());
+
+        System.out.println(myLinkedList.get(3).getValue());
     }
 }

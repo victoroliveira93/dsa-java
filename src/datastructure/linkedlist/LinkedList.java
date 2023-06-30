@@ -125,5 +125,24 @@ public class LinkedList {
         return temp;
     }
 
+    public Node get(int index) {
+
+        if(index >= length) {
+            return null;
+        }
+
+        Node currentNode = head;
+
+        for(int i = 0; i <= index; i++) {
+            if(i == index) {
+                break;
+            } else {
+                currentNode = currentNode.getNext();
+            }
+        }
+
+        return currentNode;
+    }
+
 }
 
